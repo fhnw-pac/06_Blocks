@@ -114,7 +114,7 @@ int main(void)
     // Run kernel on the GPU
     // ToDo: Play with different block/thread sizes - do you see significant differences?
     //       1048576 Threads are needed to have 1 Thread per addition
-    cudaAdd << <ToDo, ToDo >>> (deviceVectorA, deviceVectorB, deviceVectorC, N);// Kernel execution is async and will not return an error:
+    cudaAdd << <ToDo, ToDo >> > (deviceVectorA, deviceVectorB, deviceVectorC, N);// Kernel execution is async and will not return an error:
     gpuErrCheck(cudaPeekAtLastError());
 
     // Copy the result stored in deviceVectorC back to host (hostVectorCGPU)
