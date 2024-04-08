@@ -30,9 +30,9 @@
         {
             "label": "CUDA: RUN",
             "type": "shell",
-            "command": "kernel",
+            "command": "./kernel",
             "dependsOn": [
-                "CUDA C/C++: BUILD active file"
+                "CUDA BUILD"
             ],
             "options": {
                 "cwd": "${workspaceFolder}"
